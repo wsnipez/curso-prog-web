@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <h1>Eventos</h1>
+    <h2>Duplo Clique</h2>
+    <form>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome"><br>
+        <input type="number" id="idade" name="idade" placeholder="Digite a sua idade"><br>
+        <button type="button">Clique</button>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        //Carregamento da página
+        window.addEventListener("load", function() {
+            console.log("A página foi carregada")
+        })
+
+        //Duplo clique
+        document.querySelector("h2").addEventListener("dblclick", function() {
+            alert("Duplo Clique")
+        })
+
+        //Change
+        document.getElementById("nome").addEventListener("change", function(evento) {
+            alert("O novo nome é: "+evento.target.value)
+        })
+
+        //Input
+        document.getElementById("idade").addEventListener("input", function(evento) {
+            console.log("A nova idade é: "+evento.target.value)
+        })
+
+        //Clique
+        document.querySelector("button").addEventListener("click", function() {
+            alert("Clique")
+        })
+
+        //Submit
+        document.querySelector("form").addEventListener("submit", function(evento) {
+            evento.preventDefault()
+            alert("Submit")
+        })
+
+    </script>
+</body>
+</html>

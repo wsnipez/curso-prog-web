@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum efficitur tempus. Nulla consectetur tellus ut mi laoreet, sed dictum arcu vulputate. Suspendisse dignissim neque quis risus vehicula accumsan. Maecenas rhoncus dictum nulla in convallis. Donec vel felis scelerisque, ultrices velit sit amet, porta libero. Quisque nec tempus erat. In rutrum mi non purus vehicula aliquet. Phasellus facilisis pulvinar nunc, in consectetur felis luctus quis. Duis imperdiet viverra magna, vitae imperdiet leo rhoncus aliquet. Sed cursus lorem sed ligula mollis, vel tincidunt nisl semper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas mattis diam quis dolor consequat hendrerit. Suspendisse mollis erat vel nisi sagittis tempor.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum efficitur tempus. Nulla consectetur tellus ut mi laoreet, sed dictum arcu vulputate. Suspendisse dignissim neque quis risus vehicula accumsan. Maecenas rhoncus dictum nulla in convallis. Donec vel felis scelerisque, ultrices velit sit amet, porta libero. Quisque nec tempus erat. In rutrum mi non purus vehicula aliquet. Phasellus facilisis pulvinar nunc, in consectetur felis luctus quis. Duis imperdiet viverra magna, vitae imperdiet leo rhoncus aliquet. Sed cursus lorem sed ligula mollis, vel tincidunt nisl semper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas mattis diam quis dolor consequat hendrerit. Suspendisse mollis erat vel nisi sagittis tempor.
+    </p>
+
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum efficitur tempus. Nulla consectetur tellus ut mi laoreet, sed dictum arcu vulputate. Suspendisse dignissim neque quis risus vehicula accumsan. Maecenas rhoncus dictum nulla in convallis. Donec vel felis scelerisque, ultrices velit sit amet, porta libero. Quisque nec tempus erat. In rutrum mi non purus vehicula aliquet. Phasellus facilisis pulvinar nunc, in consectetur felis luctus quis. Duis imperdiet viverra magna, vitae imperdiet leo rhoncus aliquet. Sed cursus lorem sed ligula mollis, vel tincidunt nisl semper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas mattis diam quis dolor consequat hendrerit. Suspendisse mollis erat vel nisi sagittis tempor.
+        </p>
+    </div>
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum efficitur tempus. Nulla consectetur tellus ut mi laoreet, sed dictum arcu vulputate. Suspendisse dignissim neque quis risus vehicula accumsan. Maecenas rhoncus dictum nulla in convallis. Donec vel felis scelerisque, ultrices velit sit amet, porta libero. Quisque nec tempus erat. In rutrum mi non purus vehicula aliquet. Phasellus facilisis pulvinar nunc, in consectetur felis luctus quis. Duis imperdiet viverra magna, vitae imperdiet leo rhoncus aliquet. Sed cursus lorem sed ligula mollis, vel tincidunt nisl semper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas mattis diam quis dolor consequat hendrerit. Suspendisse mollis erat vel nisi sagittis tempor.
+        </p>
+    </div>
+
+    <label>Curtir?</label>
+    <label>
+        <input type="radio" name="curtir" value="Sim">
+        Sim
+    </label>
+    <label>
+        <input type="radio" name="curtir" value="Não">
+        Não
+    </label>
+
+    <br>
+
+    <label for="nome">Nome</label>
+    <input type="text" id="nome">
+
+    <button type="button" onclick="acessarDOM()">Acessar o DOM</button>
+
+    <script>
+        function acessarDOM() {
+            //Todo o corpo do documento
+            console.log(document.body)
+
+            //Busca pela TAG
+            var tagsP = document.getElementsByTagName("p")
+            console.log(tagsP)
+
+            //Busca pela classe
+            var divs = document.getElementsByClassName("container")
+            console.log(divs)
+
+            //Busca por nome
+            var radios = document.getElementsByName("curtir")
+            console.log(radios)
+
+            //Busca por id
+            var nome = document.getElementById("nome")
+            console.log(nome.value)
+            alert(nome.value)
+
+            //Busca por seletor
+            var curtido = document.querySelector("input[type='radio']:checked")
+            console.log(curtido.value)
+
+            var pS = document.querySelectorAll("p")
+            console.log(pS)
+        }
+
+        //Insere um atributo
+        var input = document.getElementById("nome")
+        input.setAttribute("placeholder", "Digite seu nome")
+
+        //Le o valor de um atributo
+        var atributo = input.getAttribute("placeholder")
+        console.log(atributo)
+        
+        //Altera conteúdo interno
+        var paragrafo = document.querySelector("p")
+        paragrafo.innerHTML = "Altera o Conteúdo Interno de um Elemento"
+
+        //Escutador de eventos
+        paragrafo.addEventListener("click", function () {
+            alert("Primeiro Paragrafo")
+        })
+
+        //Estilo
+        paragrafo.style.color = "blue"
+
+        var button = document.querySelector("button")
+
+        //Altera o display
+        button.style.display = "block"
+        //Altera cor do fundo
+        button.style.backgroundColor = "dodgerblue"
+        //Altera cor do texto
+        button.style.color = "white"
+        //Altera a borda
+        button.style.border = "none"
+        //Altera a margem interna
+        button.style.padding = "10px"
+        //Altera a margem
+        button.style.margin = "10px 0px"
+        //Altera o arredondamento das bordas
+        button.style.borderRadius = "5px"
+
+
+        //CRUD HTML
+        //Create - Criar
+        var titulo = document.createElement("h1")
+        titulo.innerHTML = "Eu sou uma h1 que foi criada por JS"
+        document.body.appendChild(titulo)
+        
+        //Read - Ler
+        var h1 = document.querySelector("h1")
+        console.log(h1.textContent)
+
+        //Update - Atualizar
+        paragrafo.textContent = "Fui alterado por JS"
+
+        //Delete - Apagar
+        var p = document.querySelector(".container p")
+        //p.remove()
+        var pai = p.parentElement
+        pai.removeChild(p)
+
+    </script>
+</body>
+</html>
