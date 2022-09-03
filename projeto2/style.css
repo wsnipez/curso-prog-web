@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("./fundo.jpg") no-repeat;
+    background-size: 100vw 100vh;
+}
+
+.pergunta {
+    font-size: 18px;
+}
+
+.alternativas {
+    text-align: left
+}
+
+.oculto {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.fade-out {
+    animation: fadeOut 1s ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
