@@ -74,6 +74,26 @@
 
         console.log(estado)
 
+        //Operador ternário
+
+        //Caso retorne true
+        var idade = 20
+        var maiorDeIdade = idade >= 18 ? "Maior de Idade" : "Menor de Idade"
+        console.log(maiorDeIdade)
+
+        //Caso retorne false
+        idade = 17
+        maiorDeIdade = idade >= 18 ? "Maior de Idade" : "Menor de Idade"
+        console.log(maiorDeIdade)
+
+        //Testando se o valor existe
+        var idadeExiste = idade ? true : false
+        console.log(idadeExiste)
+
+        idade = null
+        idadeExiste = idade ? true : false
+        console.log(idadeExiste)
+
     </script>
 </body>
 </html>
