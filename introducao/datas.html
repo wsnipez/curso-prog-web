@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/google/code-prettify@master/styles/sunburst.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="../icon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Datas</h1>
+
+        <div class="alert alert-primary" role="alert">
+            Abra o console no devtools apertando em F12 para ver os logs.
+        </div>
+
+        <pre class="prettyprint">
+            <code class="language-javascript">
+    //Cria uma nova data através da classe Date
+    var data = new Date()
+    console.log(data)
+
+    //Retorna dia da semana (0-6)
+    var diaDaSemana = data.getDay()
+    console.log(diaDaSemana)
+
+    //Retorna o dia do mes (1-31)
+    var dia = data.getDate()
+    console.log(dia)
+
+    //Retorna o mês (0-11)
+    var mes = data.getMonth()
+    console.log(mes)
+
+    //Retorna o ano com 4 digitos
+    var ano = data.getFullYear()
+    console.log(ano)
+
+    //Retorna a data em milisegundos
+    var timestamp = data.getTime()
+    console.log(timestamp)
+
+    //Retorna a data/hora no formato brasileiro
+    var dataHoraPtBr = data.toLocaleString("pt-br")
+    console.log(dataHoraPtBr)
+
+    //Retorna apenas a data no formato brasileiro
+    var dataPtBr = data.toLocaleDateString("pt-br")
+    console.log(dataPtBr)
+
+    //Usando o parametro options para formatação da data
+    const options = {
+        year: 'numeric',
+        month: 'numeric',
+        weekday: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        era: 'long',
+        timeZoneName: 'long',
+        timeZone: 'America/Sao_Paulo',
+        hour12: false
+    }
+
+    var dataFormatada = data.toLocaleDateString("pt-br", options)
+    console.log(dataFormatada)
+            </code>
+        </pre>
+
+        <footer>
+            <div>
+                ©2022 - Curso de Programação Web - Desenvolvido por 
+                <a href="https://github.com/WesleyOliveira98" target="_blank">Wesley</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="./js/datas.js"></script>
+</body>
+</html>

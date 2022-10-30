@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/google/code-prettify@master/styles/sunburst.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="../icon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Funções</h1>
+
+        <div class="alert alert-primary" role="alert">
+            Abra o console no devtools apertando em F12 para ver os logs.
+        </div>
+
+        <pre class="prettyprint">
+            <code class="language-javascript">
+    //Função Simples
+    function aviso() {
+        console.log("A função foi executada")
+        alert("Esse é um aviso!")
+    }
+
+    //Chama a função
+    aviso()
+
+    //Função com parametros
+    function soma(a, b) {
+        var resultado = a + b
+        return resultado
+    }
+
+    //Chama a função
+    var res = soma(3, 2)
+    console.log(res)
+
+
+    //Escopos
+    //Variavel Global
+    var global = 1
+
+    function escopo() {
+        //Variavel Local
+        var local = 2
+        console.log(global)
+        console.log(local)
+    }
+
+    escopo()
+
+    console.log(global)
+    //console.log(local)
+
+    if (global === 1) {
+        //Variavel com escopo de bloco
+        let bloco = 3
+        console.log(bloco)
+    }
+
+    //console.log(bloco)
+
+    //Arrow Functions
+    //Sem nenhum parametro, precisa do parenteses vazio
+    const semParametro = () => {
+        console.log("Sou uma função sem parametros")
+    }
+    semParametro()
+
+    //Somente um parametro, não precisa do parenteses
+    const comParamtero = parametro => {
+        console.log(parametro)
+    }
+    comParamtero("Teste de arrow function com 1 parametro")
+
+    //Recebe mais de 1 parametro, precisa de parenteses
+    const multiParametro = (parametro1, parametro2) => {
+        console.log(parametro1)
+        console.log(parametro2)
+    }
+    multiParametro("Parametro 1", "Parametro 2")
+
+    //Arrow function dentro de método que recebe uma função
+    var valores = [1,2,3,4]
+    valores.forEach(valor => {
+        console.log(valor)
+    })
+
+    //Arrow function com retorno dentro de método que recebe uma função
+    var valoresMaisUm = valores.map(valor => valor + 1)
+    console.log(valoresMaisUm)
+
+    //Função que retorna promessa
+    function delay(seg) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(seg)
+            }, seg * 1000)
+        })
+    }
+
+    //Função Assincrona
+    async function assincrona() {
+        console.log("Iniciou a execução da função")
+        let segundos
+        segundos = await delay(3)
+        console.log(`Demorou ${segundos} segundos para logar`)
+        segundos = await delay(5)
+        console.log(`Demorou ${segundos} segundos para logar`)
+        segundos = await delay(10)
+        console.log(`Demorou ${segundos} segundos para logar`)
+    }
+
+    assincrona()
+
+    //Função assincrona que faz o fetch
+    async function getData() {
+        try {
+            const req = await fetch('https://jsonplaceholder.typicode.com/posts')
+            console.log(req)
+            const res = await req.json()
+            console.log(res)
+        } catch (error) {
+            console.log(error.message)
+        }
+    }
+
+    getData()
+            </code>
+        </pre>
+
+        <footer>
+            <div>
+                ©2022 - Curso de Programação Web - Desenvolvido por 
+                <a href="https://github.com/WesleyOliveira98" target="_blank">Wesley</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="./js/funcoes.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações Aritmeticas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/google/code-prettify@master/styles/sunburst.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="../icon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Operações Aritmeticas</h1>
+
+        <div class="alert alert-primary" role="alert">
+            Abra o console no devtools apertando em F12 para ver os logs.
+        </div>
+
+        <pre class="prettyprint">
+            <code class="language-javascript">
+    var x = 2
+    var y = 5
+    
+    //Adição
+    console.log(x + y)
+    //Subtração
+    console.log(y - x)
+    //Multiplicação
+    console.log(x * y)
+    //Divisão
+    console.log(y / x)
+    //Exponenciação
+    console.log(y ** x)
+    console.log(Math.pow(y, x))
+    //Raiz Quadrada
+    console.log(Math.sqrt(25))
+    //Raiz Cúbica
+    console.log(Math.cbrt(8))
+    //Resto da divisão
+    console.log(x % 2)
+    console.log(y % 2)
+    
+    //Operadores de Atribuição
+    var contador = 0
+    var numeros = [1, 2, 3, 4, 5]
+    
+    //Atribuição de soma
+    numeros.forEach(numero => {
+        contador += numero
+    })
+    console.log(contador)
+    
+    //Atribuição de subtração
+    numeros.forEach(numero => {
+        contador -= numero
+    })
+    console.log(contador)
+    
+    var numero = numeros[0]
+    
+    //Atribuição de multiplicação
+    numero *= 4
+    console.log(numero)
+    
+    //Atribuição de divisão
+    numero /= 2
+    console.log(numero)
+    
+    //Atribuição de exponenciação
+    numero **= 3
+    console.log(numero)
+            </code>
+        </pre>
+
+        <footer>
+            <div>
+                ©2022 - Curso de Programação Web - Desenvolvido por 
+                <a href="https://github.com/WesleyOliveira98" target="_blank">Wesley</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="./js/operadores.js"></script>
+</body>
+</html>

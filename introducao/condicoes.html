@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/google/code-prettify@master/styles/sunburst.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="../icon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Condições</h1>
+
+        <div class="alert alert-primary" role="alert">
+            Abra o console no devtools apertando em F12 para ver os logs.
+        </div>
+
+        <pre class="prettyprint">
+            <code class="language-javascript">
+    var idade = 20
+    //Maior ou Igual
+    if (idade >= 18) {
+        console.log("Maior de idade")
+    }
+    else {
+        console.log("Menor de idade")
+    }
+
+    //Igual
+    if (idade == "20") console.log("É igual a '20'")
+
+    //Estritamente igual
+    if (idade === "20") console.log("É igual a '20'")
+    else console.log("É diferente de '20'")
+
+    //Diferente
+    if (idade != "20") console.log("É diferente de '20'")
+    else console.log("É igual a '20'")
+
+    //Estritamente diferente
+    if (idade !== "20") console.log("É diferente de '20'")
+    else console.log("É igual a '20'")
+
+    //Maior
+    if (idade > 10) console.log("Tem mais de 10 anos")
+
+    //Menor
+    if (idade < 40) console.log("Tem menos de 40 anos")
+
+    //Menor ou igual
+    if (idade <= 17) console.log("Tem 17 anos ou menos")
+
+    //Else if
+    if (idade <= 10) console.log("Não paga entrada")
+    else if (idade < 18) console.log("Paga meia entrada")
+    else if (idade >= 18) console.log("Paga entrada completa")
+
+    //Usando o AND
+    var entrada = 15
+    var saldo = 20
+    if (idade >= 18 && saldo >= entrada) console.log("Consegue comprar")
+    else console.log("Não consegue comprar")
+
+    //Usando o OR
+    var classificacao = 16
+    var responsavel = false
+    if (idade >= classificacao || responsavel) console.log("Permitido entrar")
+    else console.log("Não permitido entrar")
+
+    //Switch case
+    var estado = "SP"
+    console.log(estado)
+
+    switch (estado) {
+        case "MG": estado = "Minas Gerais"; break;
+        case "ES": estado = "Espirito Santo"; break;
+        case "RJ": estado = "Rio de Janeiro"; break;
+        case "SP": estado = "São Paulo"; break;
+        default: estado = "Não especificado"; break;
+    }
+
+    console.log(estado)
+
+    //Operador ternário
+
+    //Caso retorne true
+    var idade = 20
+    var maiorDeIdade = idade >= 18 ? "Maior de Idade" : "Menor de Idade"
+    console.log(maiorDeIdade)
+
+    //Caso retorne false
+    idade = 17
+    maiorDeIdade = idade >= 18 ? "Maior de Idade" : "Menor de Idade"
+    console.log(maiorDeIdade)
+
+    //Testando se o valor existe
+    var idadeExiste = idade ? true : false
+    console.log(idadeExiste)
+
+    idade = null
+    idadeExiste = idade ? true : false
+    console.log(idadeExiste)
+            </code>
+        </pre>
+
+        <footer>
+            <div>
+                ©2022 - Curso de Programação Web - Desenvolvido por 
+                <a href="https://github.com/WesleyOliveira98" target="_blank">Wesley</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="./js/condicoes.js"></script>
+</body>
+</html>

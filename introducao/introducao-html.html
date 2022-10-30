@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento HTML</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/google/code-prettify@master/styles/sunburst.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/introducao-html.css">
+    <link rel="icon" href="../icon.png">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Introdução HTML</h1>
+
+        <!-- Container principal -->
+        <main>
+            <!-- TAGS de Texto -->
+            <h1>Essa é uma tag h1</h1>
+            <h2>Essa é uma tag h2</h2>
+            <h3>Essa é uma tag h3</h3>
+            <h4>Essa é uma tag h4</h4>
+            <h5>Essa é uma tag h5</h5>
+            <h6>Essa é uma tag h6</h6>
+            <p>Essa é uma tag de paragrafo</p>
+            <label>Essa é uma tag de rotulo</label>
+            <br>
+            <b>Esse é um texto em negrito</b>
+            <br>
+            <strong>Esse é um texto forte</strong>
+            <br>
+            <em>Essa é uma tag de enfase</em>
+            <br>
+            <i>Essa é uma tag para textos em outro idioma</i>
+            <blockquote>"Essa é uma tag para citações"</blockquote>
+            <pre>Essa é uma tag para texto pré-formatado</pre>
+            <code>Essa é uma tag para incluir codigos</code>
+            <br>
+            <a href="http://www.google.com" target="_blank">Essa é uma tag de link</a>
+            <!-- Listas -->
+            <h2>Lista Ordenada</h2>
+            <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ol>
+            <h2>Lista Não Ordenada</h2>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+                <li>Item 6</li>
+            </ul>
+            <hr>
+            <!-- Containers Genericos -->
+            <div>
+                Essa é uma tag div
+                <h1>Essa é uma tag h1</h1>
+                <h2>Essa é uma tag h2</h2>
+                <h3>Essa é uma tag h3</h3>
+                <h4>Essa é uma tag h4</h4>
+                <h5>Essa é uma tag h5</h5>
+                <h6>Essa é uma tag h6</h6>
+            </div>
+            <div>
+                Essa é outra div
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at lacus eget elit ultricies
+                    porttitor.
+                    Aliquam et pharetra nunc. Sed eget congue urna. Phasellus nec neque quis nulla vehicula elementum.
+                    Aliquam
+                    erat volutpat. Sed eget varius lectus. Mauris ornare ligula urna, at pharetra augue maximus sit
+                    amet.
+
+                    Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent
+                    risus
+                    dui,
+                    bibendum vitae turpis in, laoreet fermentum eros. Maecenas vestibulum mattis malesuada. Vivamus
+                    aliquam
+                    sem
+                    mauris, non pretium nulla sagittis ut. Phasellus id elit in ipsum vulputate aliquam. Fusce
+                    ullamcorper
+                    venenatis est. Proin sem risus, tristique et rhoncus ut, placerat sed tortor. Donec viverra et dui
+                    eu
+                    blandit. Vivamus viverra diam vitae convallis luctus. In consequat rutrum nisi id tempor. Fusce
+                    malesuada
+                    est ac tellus suscipit vestibulum.
+
+                    Nulla tristique enim et dui consequat aliquet. Sed varius molestie odio, nec ornare est imperdiet
+                    eget.
+                    In
+                    hac habitasse platea dictumst. Curabitur finibus eros quis mauris suscipit venenatis. Vivamus vitae
+                    fermentum tortor. Nam in consequat libero. Mauris at urna porta, pretium purus at, fringilla urna.
+                </p>
+            </div>
+            <span>
+                É uma tag span
+                <h2>Lista Não Ordenada</h2>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </span>
+            <hr>
+            <!-- Tabelas -->
+            <h2>Tabela</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Linha</td>
+                        <td>Linguagem</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>HTML</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>CSS</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Javascript</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <h2 class="mt-3">CSS</h2>
+
+        <pre class="prettyprint">
+            <code class="language-css">
+    table, td {
+        border: solid black 1px;
+        border-spacing: 0;
+    }
+    
+    td {
+        padding: 15px;
+    }
+    
+    thead {
+        background-color: gray;
+        color: white;
+    }
+    
+    ol li:first-child {
+        color: green;
+    }
+    ol li:last-child {
+        color: red;
+    }
+    ul li:nth-child(odd) {
+        background-color: gray;
+    }
+    ul li:nth-child(even) {
+        background-color: #dddddd;
+    }
+            </code>
+        </pre>
+
+        <h2>HTML</h2>
+
+        <pre class="prettyprint">
+            <code class="language-html"><xmp>
+    <!-- Container principal -->
+    <main>
+        <!-- TAGS de Texto -->
+        <h1>Essa é uma tag h1</h1>
+        <h2>Essa é uma tag h2</h2>
+        <h3>Essa é uma tag h3</h3>
+        <h4>Essa é uma tag h4</h4>
+        <h5>Essa é uma tag h5</h5>
+        <h6>Essa é uma tag h6</h6>
+        <p>Essa é uma tag de paragrafo</p>
+        <label>Essa é uma tag de rotulo</label>
+        <br>
+        <b>Esse é um texto em negrito</b>
+        <br>
+        <strong>Esse é um texto forte</strong>
+        <br>
+        <em>Essa é uma tag de enfase</em>
+        <br>
+        <i>Essa é uma tag para textos em outro idioma</i>
+        <blockquote>"Essa é uma tag para citações"</blockquote>
+        <pre>Essa é uma tag para texto pré-formatado</pre>
+        <code>Essa é uma tag para incluir codigos</code>
+        <br>
+        <a href="http://www.google.com" target="_blank">Essa é uma tag de link</a>
+        <!-- Listas -->
+        <h2>Lista Ordenada</h2>
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        <h2>Lista Não Ordenada</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+        </ul>
+        <hr>
+        <!-- Containers Genericos -->
+        <div>
+            Essa é uma tag div
+            <h1>Essa é uma tag h1</h1>
+            <h2>Essa é uma tag h2</h2>
+            <h3>Essa é uma tag h3</h3>
+            <h4>Essa é uma tag h4</h4>
+            <h5>Essa é uma tag h5</h5>
+            <h6>Essa é uma tag h6</h6>
+        </div>
+        <div>
+            Essa é outra div
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at lacus eget elit ultricies porttitor.
+                Aliquam et pharetra nunc. Sed eget congue urna. Phasellus nec neque quis nulla vehicula elementum.
+                Aliquam
+                erat volutpat. Sed eget varius lectus. Mauris ornare ligula urna, at pharetra augue maximus sit amet.
+
+                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent risus
+                dui,
+                bibendum vitae turpis in, laoreet fermentum eros. Maecenas vestibulum mattis malesuada. Vivamus aliquam
+                sem
+                mauris, non pretium nulla sagittis ut. Phasellus id elit in ipsum vulputate aliquam. Fusce ullamcorper
+                venenatis est. Proin sem risus, tristique et rhoncus ut, placerat sed tortor. Donec viverra et dui eu
+                blandit. Vivamus viverra diam vitae convallis luctus. In consequat rutrum nisi id tempor. Fusce
+                malesuada
+                est ac tellus suscipit vestibulum.
+
+                Nulla tristique enim et dui consequat aliquet. Sed varius molestie odio, nec ornare est imperdiet eget.
+                In
+                hac habitasse platea dictumst. Curabitur finibus eros quis mauris suscipit venenatis. Vivamus vitae
+                fermentum tortor. Nam in consequat libero. Mauris at urna porta, pretium purus at, fringilla urna.
+            </p>
+        </div>
+        <span>
+            É uma tag span
+            <h2>Lista Não Ordenada</h2>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </span>
+        <hr>
+        <!-- Tabelas -->
+        <h2>Tabela</h2>
+        <table>
+            <thead>
+                <tr>
+                    <td>Linha</td>
+                    <td>Linguagem</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>HTML</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>CSS</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Javascript</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+            </xmp></code>
+        </pre>
+
+        <footer>
+            <div>
+                ©2022 - Curso de Programação Web - Desenvolvido por
+                <a href="https://github.com/WesleyOliveira98" target="_blank">Wesley</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/google/code-prettify@master/styles/sunburst.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="../icon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Objetos</h1>
+
+        <div class="alert alert-primary" role="alert">
+            Abra o console no devtools apertando em F12 para ver os logs.
+        </div>
+
+        <pre class="prettyprint">
+            <code class="language-javascript">
+    //Cria objeto manualmente
+    var objeto = {
+        nome: "Wesley",
+        sobrenome: "Oliveira"
+    }
+    console.log(objeto)
+
+    //Cria objeto com o construtor
+    var novoObjeto = Object.create(objeto)
+    console.log(novoObjeto.nome)
+
+    //Retorna matriz com chaves e valores do objeto
+    var entries = Object.entries(objeto)
+    console.log(entries)
+
+    //Retorna array com as chaves do objeto
+    var keys = Object.keys(objeto)
+    console.log(keys)
+
+    //Retorna um array com os valores do objeto
+    var values = Object.values(objeto)
+    console.log(values)
+
+    //Unifica dois objetos
+    var objeto2 = { sobrenome: "Snipez", idade: 24 }
+    var objetoUnificado = Object.assign(objeto, objeto2)
+    console.log(objetoUnificado)
+
+    //Unifica dois objetos com espalhamento de dados
+    var espalhamentoObjetos = {...objeto,...objeto2}
+    console.log(espalhamentoObjetos)
+            </code>
+        </pre>
+
+        <footer>
+            <div>
+                ©2022 - Curso de Programação Web - Desenvolvido por 
+                <a href="https://github.com/WesleyOliveira98" target="_blank">Wesley</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="./js/objetos.js"></script>
+</body>
+</html>

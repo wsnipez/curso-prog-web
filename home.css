@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #222222 8%, #3d0163 40%, #8f28d8 90%);
+    font-family: 'Questrial', sans-serif;
+}
+
+img {
+    width: 33%;
+    filter: invert(100%);
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
